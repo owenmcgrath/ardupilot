@@ -27,6 +27,28 @@ RUN chown -R ${USER_NAME}:${USER_NAME} /${USER_NAME}
 
 USER ${USER_NAME}
 
+RUN sudo apt-get --assume-yes install build-essential 
+RUN sudo apt-get --assume-yes install ccache 
+RUN sudo apt-get --assume-yes install g++ 
+RUN sudo apt-get --assume-yes install gawk 
+RUN sudo apt-get --assume-yes install git 
+RUN sudo apt-get --assume-yes install make 
+RUN sudo apt-get --assume-yes install wget 
+RUN sudo apt-get --assume-yes install python-is-python3 
+RUN sudo apt-get --assume-yes install libtool 
+RUN sudo apt-get --assume-yes install libxml2-dev 
+RUN sudo apt-get --assume-yes install libxslt1-dev 
+RUN sudo apt-get --assume-yes install python3-dev 
+RUN sudo apt-get --assume-yes install python3-pip 
+RUN sudo apt-get --assume-yes install python3-setuptools 
+RUN sudo apt-get --assume-yes install python3-numpy 
+RUN sudo apt-get --assume-yes install python3-pyparsing 
+RUN sudo apt-get --assume-yes install python3-psutil 
+RUN sudo apt-get --assume-yes install libpython3-stdlib 
+RUN sudo apt-get --assume-yes install libtool-bin 
+RUN sudo apt-get --assume-yes install g++-arm-linux-gnueabihf 
+RUN sudo apt-get --assume-yes install pkg-config-arm-linux-gnueabihf
+
 ENV SKIP_AP_EXT_ENV=1 SKIP_AP_GRAPHIC_ENV=1 SKIP_AP_COV_ENV=1 SKIP_AP_GIT_CHECK=1
 RUN Tools/environment_install/install-prereqs-ubuntu.sh -y
 
